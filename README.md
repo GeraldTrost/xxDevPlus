@@ -4,7 +4,7 @@ license: dual - free for non commercial use.
 
 this is intended: 
 
-xxDevPlus should become a collection of smart tools and base classes for most any java App and/or csharp App 
+xxDevPlus should become a collection of smart tools and base classes for most any java App and/or csharp App. 
 - in other words: it schould become a smart and reliable developers' kernel addressing most common developers' tasks.
 
 status:
