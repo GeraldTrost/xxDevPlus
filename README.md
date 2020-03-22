@@ -9,7 +9,7 @@ status:
 
 - because of yearlong illnesses are the csharp Classes way behind the java Classes - by far outdated in terms of functionality and in   terms of class names - not even the class names have been updated so far. it will take me years to make the csharp classes valid.
 
-- Many classes are really well tested and really smart "beasts od burdons" like Chain, Pile, KeyPile, ctx
+- Many classes are really well tested and are really smart "beasts od burdons" like Chain, Pile, KeyPile, ctx
 
 - Many other classes are to be ignored because only there für evaluation of future aproaches
 
