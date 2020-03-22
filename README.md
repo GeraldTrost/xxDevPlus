@@ -13,4 +13,4 @@ status:
 
 - Many other classes are to be ignored because only there für evaluation of future aproaches
 
-I intend to provide samples and use cases for selected classes and methods it time and healty allows.
+I intend to provide samples and use cases for selected classes and methods if time and healty allows.
