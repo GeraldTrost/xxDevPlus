@@ -16,4 +16,6 @@ It will take me years to make the csharp classes valid.
 
 - Many other classes are to be ignored because only there für evaluation of future aproaches
 
+- I suggest that you USE it by calling the methods rather then DEVELOPE it to another version. This is because the internals are really really complex to implement and to understand - think of it as something like a vm or library who's internals you would not want to see or even touch.
+
 I intend to provide samples and use cases for selected classes and methods if time and health allow.
