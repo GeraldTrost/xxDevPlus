@@ -9,7 +9,7 @@ xxDevPlus should become a collection of smart tools and base classes for most an
 
 status:
 
-- because of yearlong illnesses are the csharp Classes way behind the java Classes - by far outdated in terms of functionality and in   terms of class names - not even the class names have been updated so far. it will take me years to make the csharp classes valid.
+- because of yearlong illnesses are the csharp Classes way behind the java Classes - by far outdated in terms of functionality and in   terms of class names and method signatures - not even the class names have been updated so far. it will take me years to make the csharp classes valid.
 
 - Many classes are really well tested and are really smart and fast and reliable "beasts od burdons" like Chain, Pile, KeyPile, ctx
 
