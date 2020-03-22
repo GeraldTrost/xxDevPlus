@@ -1,0 +1,27 @@
+
+
+
+
+
+300 ml      H2O2 12% = .036 H2O2
+100 ml      ACAC 20% = .020 ACAC
+600 ml      Eth 100% = .600 Eth
+
+
+
+
+
+   6e23
+
+
+   m(H2O) = 18/6e23 g
+
+    C H3  C  O  O  O H    +    H2  O    =     H2 O2    +     C H3  C  O  O H
+   12  3 12 16 16 16 1    +     2 16    =      2 32    +    12  3 12 16 16 1
+       Peressigsäure      +    Wasser   =    Peroxid   +       Essigsäure 
+            76g           +      18g    =       34g    +          60g
+
+
+
+
+

@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D184F329-FB64-4AA3-85E1-C70B0FC32D02}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>org_getr_xxdevplus</RootNamespace>
+    <AssemblyName>xxDevPlus</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Address.cs" />
+    <Compile Include="BufOp.cs" />
+    <Compile Include="CancelledByUser.cs" />
+    <Compile Include="Cantor.cs" />
+    <Compile Include="CMatrix.cs" />
+    <Compile Include="ctlCanvas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctlCanvas.Designer.cs">
+      <DependentUpon>ctlCanvas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ctlString.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctlString.Designer.cs">
+      <DependentUpon>ctlString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ctlText.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctlText.Designer.cs">
+      <DependentUpon>ctlText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ctx.cs" />
+    <Compile Include="DatSet.cs" />
+    <Compile Include="Db.cs" />
+    <Compile Include="DbCnd.cs" />
+    <Compile Include="DbDel.cs" />
+    <Compile Include="DbIns.cs" />
+    <Compile Include="Delete.cs" />
+    <Compile Include="EvalExpert.cs" />
+    <Compile Include="Extract.cs" />
+    <Compile Include="g3ColVec.cs" />
+    <Compile Include="g3Line.cs" />
+    <Compile Include="g3PilVec.cs" />
+    <Compile Include="g3RowColVec.cs" />
+    <Compile Include="g3RowVec.cs" />
+    <Compile Include="Insert.cs" />
+    <Compile Include="InxObserver.cs" />
+    <Compile Include="KeyInxMap.cs" />
+    <Compile Include="KeyPile.cs" />
+    <Compile Include="LblBoundaryMap.cs" />
+    <Compile Include="MappedBuffer.cs" />
+    <Compile Include="MethWatch.cs" />
+    <Compile Include="NamedValue.cs" />
+    <Compile Include="ObjPile.cs" />
+    <Compile Include="Pile.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rch.cs" />
+    <Compile Include="RchOp.cs" />
+    <Compile Include="Reach.cs" />
+    <Compile Include="ReplaceWith.cs" />
+    <Compile Include="Restrict.cs" />
+    <Compile Include="Sequence.cs" />
+    <Compile Include="Sorter.cs" />
+    <Compile Include="Store.cs" />
+    <Compile Include="TaggedObject.cs" />
+    <Compile Include="utl.cs" />
+    <Compile Include="Val.cs" />
+    <Compile Include="Xpn.cs" />
+    <Compile Include="Zone.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ctlCanvas.resx">
+      <DependentUpon>ctlCanvas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctlString.resx">
+      <DependentUpon>ctlString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctlText.resx">
+      <DependentUpon>ctlText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

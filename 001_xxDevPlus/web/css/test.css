@@ -1,0 +1,38 @@
+
+body
+{
+ /*
+ position                 : relative; 
+ display                  : inline-block;
+ clear                    : none; 
+ text-align               : left;
+
+ padding-top              : 0px;
+ padding-left             : 0px;
+ padding-right            : 0px;
+ padding-bottom           : 0px;
+ margin-top               : 0px;
+ margin-left              : 0px;
+ margin-right             : 0px;
+ margin-bottom            : 0px;
+
+
+ border-radius            : 2px; 
+ -moz-border-radius       : 2px; 
+ -webkit-border-radius    : 2px; 
+ -khtml-border-radius     : 2px; 
+ 
+ background-color         : #eee;
+ 
+ font-family              : Arial,Helvetica,sans-serif;
+ font-weight              : bold;
+
+ overflow                 : -moz-scrollbars-vertical; 
+ overflow-y               : scroll;
+ text-overflow            : ellipsis; 
+ */
+}
+
+
+
+

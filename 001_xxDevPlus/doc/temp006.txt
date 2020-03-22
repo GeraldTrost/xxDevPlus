@@ -1,0 +1,13 @@
+
+
+
+    1.) exportTdb und importTdb (löscht anfangs alle tdb tabellen)
+
+    2.) createCachejpg(title, cacheFileName) schwarzer Rahmen Arial 14 
+
+    3.) Titles von class "Actor" -> cache_sks und tagArray update ...
+        von mainClass to relClasses (relnames) --> sks, tagsarray
+
+    4.) createMarkDown() für alle mainitems 
+        USA 2008 wp[] scifi war adventure director[] actor[]
+        Template (bildungsregel) wird für alle Klassen gleich sein.

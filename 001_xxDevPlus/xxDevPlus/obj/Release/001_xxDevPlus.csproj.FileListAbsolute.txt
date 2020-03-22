@@ -1,0 +1,9 @@
+D:\dev\_xxDevPlus\001_xxDevPlus\xxDevPlus\bin\Release\001_Base.dll
+D:\dev\_xxDevPlus\001_xxDevPlus\xxDevPlus\bin\Release\001_Base.pdb
+D:\dev\_xxDevPlus\001_xxDevPlus\xxDevPlus\obj\Release\org_getr_base.Properties.Resources.resources
+D:\dev\_xxDevPlus\001_xxDevPlus\xxDevPlus\obj\Release\001_xxDevPlus.csproj.GenerateResource.Cache
+D:\dev\_xxDevPlus\001_xxDevPlus\xxDevPlus\obj\Release\001_Base.dll
+D:\dev\_xxDevPlus\001_xxDevPlus\xxDevPlus\obj\Release\001_Base.pdb
+D:\dev\_xxDevPlus\001_xxDevPlus\xxDevPlus\obj\Release\org_xxdevplus_gui.ctlCanvas.resources
+D:\dev\_xxDevPlus\001_xxDevPlus\xxDevPlus\obj\Release\org_xxdevplus_gui.ctlString.resources
+D:\dev\_xxDevPlus\001_xxDevPlus\xxDevPlus\obj\Release\org_xxdevplus_gui.ctlText.resources

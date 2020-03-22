@@ -1,0 +1,15 @@
+
+
+
+https://en.wikipedia.org/wiki/Avengers:_Infinity_War
+div.mw-references-wrap.mw-references-columns
+li
+a
+
+
+kVals (Newspaper)
+
+  forbes.com             forbes                     wpID:Forbes
+  nyt.com                New York Times             wpID:New_York_Times
+  hollywoodreporter.com  The Hollywood Reporter     wpID:The_Hollywood_Reporter
+

@@ -1,0 +1,18 @@
+
+
+https://en.wikipedia.org/wiki/Bunte
+atr = 'Officialwebsite', id = 'wpID:Bunte', title = 'Bunte'
+
+
+
+         String npwebsite = mCtx.applyJsoup2("newspaperCache", domain, item, "", 
+
+"attr||abs:href", 
+                                             
+a:contains(Official website)
+a
+
+tr:contains(Website)
+a
+
+

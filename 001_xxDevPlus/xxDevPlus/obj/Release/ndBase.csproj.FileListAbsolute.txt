@@ -1,0 +1,10 @@
+d:\dev.getr\nd\trunk\ndBase\ndBase\bin\Release\FlexBase0008.dll
+d:\dev.getr\nd\trunk\ndBase\ndBase\bin\Release\FlexBase0008.pdb
+d:\dev.getr\nd\trunk\ndBase\ndBase\obj\Release\ResolveAssemblyReference.cache
+d:\dev.getr\nd\trunk\ndBase\ndBase\obj\Release\ndBase.ctlString.resources
+d:\dev.getr\nd\trunk\ndBase\ndBase\obj\Release\ndBase.ctlText.resources
+d:\dev.getr\nd\trunk\ndBase\ndBase\obj\Release\FlexBase.Properties.Resources.resources
+d:\dev.getr\nd\trunk\ndBase\ndBase\obj\Release\ndBase.csproj.GenerateResource.Cache
+d:\dev.getr\nd\trunk\ndBase\ndBase\obj\Release\FlexBase0008.dll
+d:\dev.getr\nd\trunk\ndBase\ndBase\obj\Release\FlexBase0008.pdb
+d:\dev.getr\nd\trunk\ndBase\ndBase\obj\Release\ndBase.ctlCanvas.resources

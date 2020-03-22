@@ -1,0 +1,27 @@
+
+
+
+
+:id              
+'atr:':atr
+((.href[at('//')..-1])[ctm(' /')])[Wtm('www.')]
+
+
+https://en.wikipedia.org/wiki/Bunte
+atr = 'Officialwebsite', id = 'wpID:Bunte', title = 'Bunte'
+a:contains(Official website)
+
+
+https://en.wikipedia.org/wiki/BuzzFeed_News
+atr = 'Officialwebsite', id = 'wpID:Buzzfeed_News', title = 'Buzzfeed News'
+tr:contains(website)
+[1..1]a
+
+https://en.wikipedia.org/wiki/Machinima,_Inc.
+atr = 'Officialwebsite', id = 'wpID:Machinima,_Inc.', title = 'Machinima, Inc.'
+th:contains(website) + *
+[1..1]a
+
+https://en.wikipedia.org/wiki/Eagle_(British_comics)
+atr = 'Officialwebsite', id = 'wpID:Eagle_(British_comics)', title = 'Eagle'
+

@@ -1,0 +1,396 @@
+
+package org.xxdevplus.udf;
+
+import java.io.File;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+import org.xxdevplus.chain.Chain;
+import org.xxdevplus.frmlng.Pick;
+import org.xxdevplus.frmlng.Zone;
+import org.xxdevplus.struct.KeyPile;
+import org.xxdevplus.struct.Pile;
+import org.xxdevplus.struct.Triple;
+import org.xxdevplus.sys.StringVal;
+import org.xxdevplus.utl.utl;
+
+
+/** Xml or Html Tags Collection based on Jsoup: provides most versatile cascading select Methods with jquery-similar select syntax and holds the result Elements*/
+public class XhtTags extends Pile<Element> 
+{  
+ private String                    defaultMethodClass = "";
+ private XhtCache                  cache              = null;
+ private Element                   root               = null;
+ private KeyPile<String, String>   extParams          = new KeyPile<String, String>();
+ 
+ /** @param root Jsoup Element @param defaultMethodClass "" OR fully qualified name of a public class for calling Test-Methods during future select calls*/
+ public  XhtTags(Element root, String defaultMethodClass) throws Exception 
+ { 
+  this.root = root;
+  this. defaultMethodClass =  defaultMethodClass;
+ }
+
+ /** @param root Jsoup Element */
+ public  XhtTags(Element root) throws Exception 
+ { 
+  this(root, "");
+ }
+ 
+ /** @param root Jsoup Element @param defaultMethodClass "" OR fully qualified name of a public class for calling Test-Methods during future select calls*/
+ public  XhtTags(String url, String extParams, String cacheFolder, String cacheFileNamePattern, String defaultMethodClass) throws Exception 
+ {
+  this.defaultMethodClass  = defaultMethodClass;
+  this.cache               = new XhtCache(new File(cacheFolder), cacheFileNamePattern, 2000);
+  root                     = cache.getDocument(url);
+  Chain extPrm = new Chain(extParams.trim());
+  while (extPrm.len() > 0)
+  {
+   Chain val = Zone.charray.upon(extPrm);
+   if (val.len() == 0) 
+    extPrm = Chain.Empty; 
+   else
+    {
+     this.extParams.Add(extPrm.before(1, "=").Trim().text(), val.from(2).upto(-2).text());
+     extPrm = extPrm.after(val).after(1, ",").Trim(); 
+    }
+  }
+ }
+
+ /** @param root Jsoup Element @param defaultMethodClass "" OR fully qualified name of a public class for calling Test-Methods during future select calls*/
+ public  XhtTags(String url, String extParams, String defaultMethodClass) throws Exception 
+ { 
+  this(url, extParams, "", "", "");
+ }
+
+ /** @param root Jsoup Element */
+ public  XhtTags(String url, String extParams) throws Exception 
+ { 
+  this(url, extParams, "");
+ }
+   
+ private XhtTags(String defaultMethodClass, XhtCache cache, Element root, KeyPile<String, String> extParams) throws Exception 
+ {
+  this.defaultMethodClass      = defaultMethodClass ;
+  this.cache                   = cache              ;
+  this.root                    = root;
+  this.extParams               = extParams;
+ }
+
+ private Pile<String> resVnt (String s) throws Exception 
+ {
+  Pile<String> ret = new Pile<String> ();
+  ret.Push(s);
+  return ret;
+ }
+
+ 
+ // constDependsOnVars: if all variable Terms are emty then the constant Terms will be omitted
+ private String evalTerm(boolean constDependOnVars, Element el, Pile<Chain> operands, KeyPile<String, StringVal> strValMethods) throws Exception
+ {
+  String ret = "";
+  Pile<Pile<String>> res = new Pile<Pile<String>>();
+  for (Chain op: operands)
+  {
+   Pile<Chain> restrictors = new Pile<Chain>();
+   while (op.less(Pick.sglSQots.upon(op)).less(Pick.sglCrlys.upon(op)).less(Pick.sglBrcs.upon(op)).at(1, "[").len() > 0)   // while (op.less(Zone.charrays.upon(op)).less(Zone.curlybracks.upon(op)).less(Zone.bracelets.upon(op)).at(1, "[").len() > 0)
+   {
+    Chain restrictor = Zone.bracket.upon(op.less(Zone.charrays.upon(op)).less(Zone.curlybracks.upon(op)).less(Zone.bracelets.upon(op)));
+    Chain rest = op.before(restrictor).plus(op.after(restrictor));
+    restrictors.Push(op.less(rest));
+    op = op.less(restrictors.g(-1));   
+   }
+   if (op.startsWith(")!(") || op.startsWith("{") || op.startsWith("(")) 
+   {
+    if (op.startsWith(")!(")) 
+    {
+     Chain functor = op.from(4).before(1, "(");
+     Pile<Chain> compiled = compileTerm(op.after(functor).from(2).upto(-2), strValMethods);
+     String arg = evalTerm(false, el, compiled, strValMethods).trim();
+     if (functor.text().trim().equals("text"))
+      res.Push(el.text());
+     if (functor.text().trim().equals("sin"))
+      if (arg.endsWith("°")) res.Push("" + Math.sin(Double.parseDouble(arg.substring(0, arg.length() - 1).trim()) * Math.PI / 180)); else res.Push("" + Math.sin(Double.parseDouble(arg)));
+     if (functor.text().trim().equals("*sin"))
+     {
+      if (arg.endsWith("°")) res.Push(resVnt("" +  Math.sin(Double.parseDouble(arg.substring(0, arg.length() - 1).trim()) * Math.PI / 180))); else res.Push(resVnt("" +  Math.sin(Double.parseDouble(arg))));
+      if (arg.endsWith("°")) res.g(-1).Push("" + -Math.sin(Double.parseDouble(arg.substring(0, arg.length() - 1).trim()) * Math.PI / 180)); else res.g(-1).Push("" + -Math.sin(Double.parseDouble(arg)));
+     }
+    }
+    else
+    {
+     Pile<Chain> compiled = compileTerm(op.from(2).upto(-2), strValMethods);
+     Chain endMarker = op.startsWith("{") ? op.less(Zone.charrays.upon(op)).at(1, "}") : op.less(Zone.charrays.upon(op)).at(1, ")");
+     if (endMarker.len() == 0) throw new Exception("malformed Term " + op.text());
+     res.Push(evalTerm(op.startsWith("{"), el, compiled, strValMethods));
+    }
+   }
+   else
+   {
+    Element e = el;
+    if ((op.startsWith("<")) && !(op.startsWith("<<")))
+    {
+     Chain moves = Pick.sglAngls.grabOne().host(Pick.sglSQots).upon(true, op).from(2).upto(-2);
+     while (moves.len() > 0)
+     {
+      Chain move = moves.before(1, ";");
+      moves = moves.after(1, ";");
+      int hmove = Integer.parseInt(move.before(1, ",").text());
+      int vmove = Integer.parseInt(move.after(1, ",").text());
+      if (hmove < 0) for (int i = hmove; i < 0; i++) e = e.previousElementSibling() ; else for (int i = 1    ; i <= hmove; i++) e = e.nextElementSibling(); 
+      if (vmove < 0) for (int i = vmove; i < 0; i++) e = e.parent()                 ; else for (int i = 1    ; i <= vmove; i++) e = e.child(0); 
+     }
+     op = op.after(1, ">");
+    }
+    if (op.startsWith("'")) 
+     res.Push("<<!@@ " + op.from(2).before(-1).text());
+    else
+     if (op.startsWith(".")) 
+     {
+      if (op.at("()").len() == 0)
+       res.Push(e.attr(op.from(2).text()));
+      else
+      {
+       if (op.Equals(".own()"))        res.Push(e.ownText());
+       else
+        if (op.Equals(".text()"))      res.Push(e.text());
+        else
+         if (op.Equals(".html()"))     res.Push(e.html());
+         else
+          if (op.Equals(".class()"))   res.Push(e.className());
+          else
+           throw new Exception("unknown Jsoup function() " + op.text());
+      }
+     }
+     else
+      if (op.startsWith(":")) 
+      {
+       if (op.at("()").len() == 0)
+        res.Push(extParams.g(op.from(2).text()));
+       else
+       {
+        if (op.Equals(":product()"))   res.Push("Everest");
+        else
+         throw new Exception("unknown external function() " + op.text());
+       }
+      }
+      else
+       if (op.startsWith("<<")) 
+        res.Push(((String)(strValMethods.g(op.text()).method.invoke(strValMethods.g(op.text()).creator, el))).trim());
+       else throw new Exception("malformed Term " + op.text());
+   }
+   String recent = null;
+   for (Chain restrictor : restrictors)
+   {
+    if (restrictor.startsWith("[1..15"))
+     restrictor = restrictor;
+    restrictor = restrictor.from(2).upto(-2);
+    int min    = Integer.parseInt(restrictor.before (1, "..").text());
+    int max    = Integer.parseInt(restrictor.after  (1, "..").text());
+    if (res.g(-1).startsWith("<<!@@ ")) 
+     recent     = utl.notNull(recent) + "<<!@@ " + new Chain(res.g(-1).substring(6)).upto(max).from(min).text();
+    else
+     recent     = utl.notNull(recent) + new Chain(res.g(-1)).upto(max).from(min).text();
+   }
+   if (recent != null) res.s(recent, -1);
+  }
+  if (constDependOnVars)
+  {
+   for (String s : res) if (!s.startsWith("<<!@@ ")) ret += s;
+   if (ret.trim().length() == 0) return "";
+  }
+  ret = "";
+  for (String s : res) 
+   if (s.startsWith("<<!@@ ")) 
+    ret += s.substring(6); 
+   else 
+    ret += s;
+  
+  return ret;
+ }
+
+ private boolean evalCond(Element el, Pile<Pile<Chain>> operandsSet, KeyPile<String, StringVal> strValMethods) throws Exception
+ {
+  boolean ret = true;
+  for (Pile<Chain> operands : operandsSet)
+   for (int i = 1; i <= operands.Len(); i++)
+   {
+    if ((operands.g(i).text().equals("==")) || (operands.g(i).text().equals("!=")))
+    {
+     String l = evalTerm(false, el, operands.before(i), strValMethods);
+     String r = evalTerm(false, el, operands.after(i) , strValMethods);
+     if (operands.g(i).text().equals("==")) ret = l.equals(r); else ret = !l.equals(r);
+     if (!ret) return ret;
+     break;
+    }
+   }
+  return ret;
+ }
+
+ private Pile<Chain> compileTerm(Chain def, KeyPile<String, StringVal> strValMethods) throws Exception
+ {
+  Pile<Chain> ret = new Pile<Chain>();
+  def = def.Trim();
+  while (def.len() > 0)
+  {
+   Chain prefix = null;
+   if ((def.startsWith("<")) && !(def.startsWith("<<")))
+   {
+    prefix = Pick.sglAngls.grabOne().host(Pick.sglSQots).upon(true, def);   
+    def = def.after(prefix);
+   }   
+   if ((def.startsWith("'")))                            
+    ret.Push(def.upto(2, "'"));
+   else
+    if ((def.startsWith("==")) || (def.startsWith("!="))) 
+     ret.Push(def.upto(2));
+    else
+     if ((def.startsWith(".")))                            
+      ret.Push(def.before(1, " ").upto(1, "()").before(1, "<").before(1, "{").before(1, "[").before(1, "(").before(1, "'").before(1, ":").before(2, "."));
+     else
+      if ((def.startsWith(":")))
+       ret.Push(def.before(1, " ").upto(1, "()").before(1, "<").before(1, "{").before(1, "[").before(1, "(").before(1, "'").before(1, ".").before(2, ":"));
+      else
+       if (def.startsWith("{") || def.startsWith("("))
+       {
+        Pick p = def.startsWith("{") ? Pick.sglCrlys : Pick.sglBrcs;
+        ret.Push(p.grabOne().upon(true, def));
+       }
+       else
+        if ((def.startsWith("<<")))
+        {
+         ret.Push(Pick.dblAngls.grabOne().host(Pick.sglSQots).upon(def));
+         if (ret.g(-1).at(".").len() == 0) strValMethods.Add(ret.g(-1).text(), new StringVal(defaultMethodClass + "." + ret.g(-1).after(2).before(-2).text().trim(), Element.class)); else strValMethods.Add(ret.g(-1).text(), new StringVal(ret.g(-1).after(2).before(-2).text().trim(), Element.class));
+        }
+        else 
+        {
+         Pick p = Pick.sglBrcs.host(Pick.sglSQots).aviod(Pick.sglSQots).grabOne();
+         Chain arg = p.upon(def); 
+         if (arg.len() == 0) throw new Exception("malformed XhtTag term " + def.text());
+         ret.Push(new Chain(")!(").plus(def.upto(arg)));
+         def = new Chain(")!(").plus(def);
+        }
+   if (ret.g(-1).len() == 0) throw new Exception("malformed XhtTag selector");
+   def = def.after(ret.g(-1)).Trim();
+   //debug def = new Chain("[1..2, 'ab]cd'][3..5]div");
+   if (prefix != null) ret.s(prefix.plus(ret.g(-1)), -1);
+   while (def.startsWith("[") && def.len() > 0)
+   {
+    if (def.startsWith("[1.."))
+     def = def;
+    Chain restrictor = Pick.sglBrks.grabOne().host(Pick.sglSQots).upon(true, def);
+    ret.s(ret.g(-1).plus(restrictor), -1);
+    def = def.after(restrictor).Trim();
+   }
+   
+  }
+  return ret;
+ }
+
+ 
+ /** qjuery similar select 
+     @param selector samples:                                                                                     <br>
+     <b>"div#mydiv"</b>                                                                                           <br>
+      see jquery documentation                                                                                    <br>
+     <b>"[2..3]div#mydiv"</b>                                                                                     <br>
+      only return second and third found Element                                                                  <br>
+     <b>"[2..3], -1]div#mydiv"</b>                                                                                <br>
+      return predecessor siblings of second and third found Element                                               <br>
+     <b>"[2..3, org.tst.TstMeth.tst1, org.tst.TstMeth.tst1]div#mydiv"</b>                                         <br>
+      return second and third found Element but only those who pass BOTH test-Methods returning non-empty Strings <br>
+     <b>"[2..3, tst1, tst1]div#mydiv"</b>                                                                         <br>
+      same if defaultMethodClass "org.tst.TstMeth" was specified in constructor                                   <br>
+     <b>"div#mydiv", "[1..2]a" (cascaded select)</b>                                                              <br>
+      first select all mathing div Elements and from each retürn the first 2 anchor Elements                      <br>
+ */
+ public XhtTags select(String... selector) throws Exception
+ {
+  while (this.Len() > 0) Pop();
+  //if ((this.url.length() > 0) && !(root.baseUri().contains(this.url))) return this;
+  if (root instanceof Document) Push(root.select("body").first()); else Push(root);
+  return subSelect(selector);
+ }
+
+ public XhtTags select(boolean startWithDocument, String... selector) throws Exception
+ {
+  while (this.Len() > 0) Pop();
+  //if ((this.url.length() > 0) && !(root.baseUri().contains(this.url))) return this;
+  if (startWithDocument) Push(root.ownerDocument()); else if (root instanceof Document) Push(root.select("body").first()); else Push(root);
+  return subSelect(selector);
+ }
+ 
+public XhtTags subSelect(String... selector) throws Exception
+ {
+  if (selector.length == 0) return this;
+  Pile<Pile<Chain>>          operandSet     = new Pile<Pile<Chain>>();
+  KeyPile<String, StringVal> strValMethods  = new KeyPile<String, StringVal>();  
+  String[] subSelector = new String[selector.length - 1];
+  System.arraycopy(selector, 1, subSelector, 0, subSelector.length);
+  Chain query = new Chain(selector[0]).Trim();
+  int dist = 0; int min  = 0; int max  = 0; 
+  if (query.StartsWith("["))
+  {
+   if (query.StartsWith("[1..20"))
+    query = query;
+   Chain defs = query.less(query.after(Zone.bracket.upon(query.less(Zone.charrays.upon(query))))).from(2).upto(-2);
+   query = query.after(defs).from(2);
+   while (defs.len() > 0)
+   {
+    Chain def = defs.before(1, ",").Trim();
+    while (((def.count("'") % 2) == 1) && (defs.after(def).count("'") > 0)) def = def.plus(",").plus(defs.after(def).from(2).before(1, ",").Trim());
+    defs = defs.after(def).from(2).Trim();
+    if (def.before(1, "[").before(1, "'").at(1, "..").len() == 0) try { dist = Integer.parseInt(def.text().trim());} catch (Exception ex) {operandSet.Push(compileTerm(def, strValMethods)); }
+    else { min = Integer.parseInt(def.before( 1, "..").text().trim()); max = Integer.parseInt(def.after(  1, "..").text().trim()); }
+   }
+  }
+  XhtTags ret = new XhtTags(defaultMethodClass, cache, root, extParams); 
+  for (Element top: this) 
+  {
+   Elements found = top.select(query.text());   
+   if (found.size() > 0) 
+   {
+    if (found.get(0) == top) found.remove(0);
+    if (max  > 0) while (found.size() > max) found.remove(max);
+    if (min  > 0) for (int i = 1; i < min; i++) found.remove(0);                         
+    if (dist < 0) for (int i = 1; i <= found.size(); i++) for (int j = 1; j <= -dist; j++) found.set(i - 1, found.get(i - 1).previousElementSibling() );   // search not the found Element but rather search the next     siblings
+    if (dist > 0) for (int i = 1; i <= found.size(); i++) for (int j = 1; j <=  dist; j++) found.set(i - 1, found.get(i - 1).nextElementSibling()     );   // search not the found Element but rather search the previous siblings  
+    for (Element el : found) if (evalCond(el, operandSet, strValMethods)) ret.Push(el);
+   }
+  }
+  return ret.subSelect(subSelector);  
+ } 
+ 
+ public Pile<Triple> triples(String lDef, String mDef, String rDef) throws Exception
+ {
+  Pile<Triple> ret = new Pile<Triple>();
+  KeyPile<String, StringVal> strValMethods  = new KeyPile<String, StringVal>();  
+  Pile<Chain> lOps = compileTerm(new Chain(lDef), strValMethods);
+  Pile<Chain> mOps = compileTerm(new Chain(mDef), strValMethods);
+  Pile<Chain> rOps = compileTerm(new Chain(rDef), strValMethods);
+  for (Element el : this)
+  {
+   String l = evalTerm(false, el, lOps, strValMethods).trim();
+   String m = evalTerm(false, el, mOps, strValMethods).trim();
+   String r = evalTerm(false, el, rOps, strValMethods).trim();
+   if ((l.length() > 0) && (m.length() > 4) && (r.length() > 0)) ret.Push(new Triple(m.charAt(0), l, m.substring(4), r));   
+  }
+  return ret;
+ }
+
+ public Pile<Triple> triples(String[][] defs) throws Exception
+ {
+  Pile<Triple> ret = new Pile<Triple>();
+  for (String[] def : defs) ret.Push(triples(def[0], def[1], def[2]));
+  return ret;
+ }
+  
+ public XhtCache cache()
+ {
+  return cache;
+ }        
+
+ 
+}
+
+
+
+

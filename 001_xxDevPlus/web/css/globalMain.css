@@ -1,0 +1,443 @@
+
+
+
+ /* body */
+old-body
+{
+
+ position                 : relative; 
+ display                  : inline-block;
+ clear                    : none; 
+ text-align               : left;
+
+ padding-top              : 0px;
+ padding-left             : 0px;
+ padding-right            : 0px;
+ padding-bottom           : 0px;
+ margin-top               : 0px;
+ margin-left              : 0px;
+ margin-right             : 0px;
+ margin-bottom            : 0px;
+
+
+ border-radius            : 2px; /* CSS3 */
+ -moz-border-radius       : 2px; /* Firefox */
+ -webkit-border-radius    : 2px; /* Safari, Chrome */
+ -khtml-border-radius     : 2px; /* KHTML */
+ 
+ background-color         : #eee;
+ 
+ font-family              : Arial,Helvetica,sans-serif;
+ font-weight              : bold;
+
+ overflow                 : -moz-scrollbars-vertical; 
+ overflow-y               : scroll;
+ text-overflow            : ellipsis; 
+
+}
+
+ .topheader
+ {
+  position                 : relative;
+  display                  : inline-block;
+  float                    : left;
+  clear                    : both;
+  text-align               : left;
+  width                    : 100%;
+  min-height               : 7px;
+  max-height               : 7px;
+  background-image         : url("../img/headerrainbow.png");
+  background-repeat        : no-repeat;
+  background-size          : cover;
+ }
+
+ .leftDiv
+ {
+  position                 : relative;
+  display                  : inline-block;
+  float                    : left;
+  clear                    : both;
+  text-align               : center;
+  width                    : 100%;
+  height                   : 30px;
+  min-height               : 250px;
+  background-color         : #ccc;
+  font-family              : serif;
+  overflow                 : hidden;
+  text-overflow            : ellipsis;       
+  border-top               : 1px solid red; 
+  border-left              : 1px solid red; 
+  border-right             : 1px solid red; 
+  border-bottom            : 1px solid red; 
+ }
+ 
+ .menuheader
+ {
+  position                 : relative;
+  float                    : left;
+  clear                    : both;
+  text-align               : center;
+  width                    : 100%;
+  height                   : 30px;
+  min-height               : 350px;
+  background-color         : #ccc;
+  font-family              : serif;
+  overflow                 : hidden;
+  text-overflow            : ellipsis;  
+ }
+
+  .headerButton  
+  {
+   position                 : relative;
+   float                    : left;
+   align                    : left;
+   margin                   : 0px;
+   border                   : 1px 1px;
+   -moz-border-radius       : 3px; /* Firefox */
+   -webkit-border-radius    : 3px; /* Safari, Chrome */
+   -khtml-border-radius     : 3px; /* KHTML */
+   border-radius            : 3px; /* CSS3 */
+   border-top               : 0;
+   border-bottom            : 0;
+   border-color             : #ed9c28;
+   padding-top              : 1px;
+   padding-left             : 18px;
+   width                    : 24px;
+   height                   : 25px;
+   background               : #2969B0;
+   cursor                   : pointer; 
+  }
+
+  
+  .rightDiv  
+  {
+   position                 : relative;
+   clear                    : none;
+   float                    : right;
+   align                    : right;
+   margin                   : 0px;
+   border                   : 2px solid blue;
+   padding                  : 6px;
+   min-width                : 90px;
+   max-width                : 90px;
+   display                  : table-cell; 
+  }
+
+  .headerGeoFilters
+  {
+   position                 : relative;
+   float                    : left;
+   display                  : inline-block;
+   text-align               : left;
+   padding                  : 10px;
+  }
+   
+   .spacer
+   {
+   }
+   
+   .geoPos
+   {
+    position                 : relative;
+    float                    : left;
+    display                  : inline-block;
+    text-align               : left;
+    font-size                : 2;
+    font-weight              : normal;
+    padding                  : 5px;
+   }
+   
+  .mediaTypeFilters
+  {
+   position                 : relative;
+   float                    : left;
+   display                  : inline-block;
+   text-align               : left;
+   padding                  : 10px;       
+  }
+
+   .mediaType
+   {
+    position                 : relative;
+    float                    : left;
+    display                  : table;
+    margin                   : 10 auto;
+    text-align               : left;
+    font-size                : 2;
+    font-weight              : normal;
+    padding                  : 5px;
+   }
+  
+  .headerSearchButton
+  {
+       
+  }
+
+   .search
+   {
+        
+   }
+  
+  
+  .searchPane
+ {
+  display                  : inline-block;
+  clear                    : both;
+  width                    : 100%;
+ }
+  
+  #searchheader
+  {
+   padding                  : 0;
+   border-top               : 0;
+   border-bottom            : 0;
+   margin                   : 0;
+   background-color         : #ccc;
+   font-family              : Arial,Helvetica,sans-serif;
+   text-align               : left;
+   height                   : 36px;
+   padding-top              : 4px; 
+   padding-left             : 65px;  
+  }
+
+
+
+ 
+  
+  
+  #tagCloud 
+  {
+   background-color         : #f0f0f0;
+   font-family              : Arial,Helvetica,sans-serif;
+   font-weight              : bold;
+   color                    : darkslategray;
+   text-align               : left;
+   min-height               : 85px;
+   width                    : auto;
+   text-align               : center;
+
+   padding-top              : 36px; 
+   padding-left             : 180px; 
+   padding-right            : 180px; 
+   padding-bottom           : 0px;
+
+   line-height              : 35px;
+   border-top               : 0;
+   border-left-color        : #f0f0f0;
+   border-right-color       : #f0f0f0;
+   border-bottom            : 1px;
+   border-style             : solid;
+   border-bottom-color      : white;
+  }
+
+   .tagMenu1
+   {
+    -moz-border-radius       : 3px; /* Firefox */
+    -webkit-border-radius    : 3px; /* Safari, Chrome */
+    -khtml-border-radius     : 3px; /* KHTML */
+    border-radius            : 3px; /* CSS3 */
+    padding                  : 0;
+    border-top               : 0;
+    border-bottom            : 0;
+    background               : #eee;
+    cursor                   : pointer;
+    border                   : 1px 1px;
+    border-color             : #eee;
+   }
+
+   .tagMenu2  
+   {
+    -moz-border-radius       : 3px; /* Firefox */
+    -webkit-border-radius    : 3px; /* Safari, Chrome */
+    -khtml-border-radius     : 3px; /* KHTML */
+    border-radius            : 3px; /* CSS3 */
+    padding                  : 0;
+    border-top               : 0;
+    border-bottom            : 0;
+    background               :#ed9c28;
+    cursor                   : pointer;
+    border                   : 1px 1px;
+    border-color             : #eee;
+   }
+
+   .slcButton1
+   {
+    -moz-border-radius       : 3px; /* Firefox */
+    -webkit-border-radius    : 3px; /* Safari, Chrome */
+    -khtml-border-radius     : 3px; /* KHTML */
+    border-radius            : 3px; /* CSS3 */
+    padding                  : 0;
+    border-top               : 0;
+    border-bottom            : 0;
+    background               : #eee;
+    cursor                   : pointer;
+    border                   : 1px 1px;
+    border-color             : #eee;
+   }
+
+   .slcButton2
+   {
+    -moz-border-radius       : 3px; /* Firefox */
+    -webkit-border-radius    : 3px; /* Safari, Chrome */
+    -khtml-border-radius     : 3px; /* KHTML */
+    border-radius            : 3px; /* CSS3 */
+    padding                  : 0;
+    border-top               : 0;
+    border-bottom            : 0;
+    background               :#ed9c28;
+    cursor                   : pointer;
+    border                   : 1px 1px;
+    border-color             : #eee;
+   }
+
+   
+  #subTagCloud  
+  {
+   background-color         : #eeeef0;
+   font-family              : Arial,Helvetica,sans-serif;
+   font-weight              : normal;
+   color                    : darkslategray;
+   text-align               : left;
+   min-height               : 50px;
+   width                    : auto;
+   text-align               : center;
+   padding-top              : 6px; 
+   padding-left             : 140px; 
+   padding-right            : 140px; 
+   line-height              : 35px;
+   font-size                : 14px;
+  }
+
+
+  
+  
+  
+  a:hover 
+  {
+   position                 : relative;
+   color                    : orange;
+   border                   : 1px 1px;
+   border-color             : red;
+  }
+
+ 
+
+  .buttonArrow   
+  {
+   border-right             : 4px solid; 
+   border-bottom            : 4px solid;
+   width                    : 12px; 
+   height                   : 12px;
+   transform                : rotate(+45deg);
+   color                    : white;  
+  } 
+
+  .buttonArrow123
+  {
+   border-left              : 3px solid black;
+   border-top               : 1px solid black;
+   border-right             : 0px solid black;
+   border-bottom            : 1px solid black;
+   border-radius            : 6px;
+   padding                  : 0px;   
+   border-right             : 4px solid; 
+   border-bottom            : 4px solid;
+   width                    : 12px; 
+   height                   : 12px;
+   transform                : rotate(+45deg);
+   color: white;
+  }
+
+
+  #FlatSearchBox 
+  {
+   border                   : 1px solid rgb(128,128,128); 
+   font-family              : Arial,Helvetica,sans-serif;
+   font-weight              : bold;
+   font-size                : larger;
+   text-align               : center;
+   -moz-border-radius       : 4px; /* Firefox */
+   -webkit-border-radius    : 4px; /* Safari, Chrome */
+   -khtml-border-radius     : 4px; /* KHTML */
+   border-radius            : 4px; /* CSS3 */
+   behavior                 : url("border-radius.htc");
+   width                    : 91%;
+   height                   : 26px;
+  }
+
+  .slcLabel1
+  { 
+   position              : relative;
+   float                 : left;
+   align                 : left;
+   margin                : 0px;
+   border-left           : 3px solid black;
+   border-top            : 1px solid black;
+   border-right          : 0px solid black;
+   border-bottom         : 1px solid black;
+   border-radius         : 6px;
+   padding               : 0px;
+   width                 : auto;
+   height                : auto;
+   line-height           : 14pt;
+   background-color      : #eeeeee;
+   color                 : blue;
+   overflow              : hidden;
+   text-overflow         : ellipsis; 
+  }
+
+
+
+  /* http://nicolasgallagher.com/pure-css-gui-icons/demo/#non  */
+
+  .search a:before  
+  {
+   width                 : 6px;
+   height                : 6px;
+   border                : 3px solid #2969B0;
+   background            : #2969B0;
+   /* css3 */
+   -webkit-border-radius : 12px;
+   -moz-border-radius    : 12px;
+   border-radius         : 12px; 
+  }
+
+  .search a:after  
+  {
+   left                   : 10px;
+   width                  : 3px;
+   height                 : 7px;
+   margin-top             : 0;
+   /* css3 */
+   -webkit-transform      : rotate(-45deg);
+   -moz-transform         : rotate(-45deg);
+   -ms-transform          : rotate(-45deg);
+   -o-transform           : rotate(-45deg);
+   transform              : rotate(-45deg); 
+  }
+
+  .search a:hover:before,
+  .search a:focus:before,
+  .search a:active:before  
+  {
+   border-color           : #2969B0;
+   background             : #2969B0; 
+  }
+
+  .search a:hover:after,
+  .search a:focus:after,
+  .search a:active:after 
+  {
+   background             : #2969B0;
+  }
+
+  
+  
+  
+  
+ /* /body */
+
+ 
+ 
+ 
+ 

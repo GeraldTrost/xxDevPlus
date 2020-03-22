@@ -1,0 +1,239 @@
+
+body 
+{
+ display                  : block;
+ float                    : none;
+ clear                    : none;
+}
+
+/* #query Result Pane */
+.qRpane
+{
+}
+
+ /* queryResult primary Image Pane */
+ .qRpImgPane               
+ {
+  max-width                : 280px     
+ } 
+
+  /* queryResult primary Group */
+  .qRpGroup               
+  {
+  }
+
+   /* queryResult primary Image Div */
+   .qRpImgDiv                
+   {
+   }
+
+    /* queryResult primary Image Header */
+    .qRpImgHeader             
+    {
+    }
+    /* /queryResult primary Image Header */
+
+    /* queryResult primary Image Frame */
+    .qRpImgFrame              
+    {
+    }
+
+     /* queryResult primary Image (standard) */
+     .qRpImg1                  
+     {
+      width                    : 280px;         
+     }
+     /* /queryResult primary Image (standard) */
+
+     /* queryResult primary Image (hilighted) */
+     .qRpImg2                  
+     {
+      width                    : 280px;         
+     }
+     /* /queryResult primary Image (hilighted) */
+
+    /* /queryResult primary Image Frame */
+
+    /* queryResult primary Image Title */
+    .qRpImgTitle              
+    {
+    }
+    /* /queryResult primary Image Title */
+
+   /* /queryResult primary Image Div */
+  
+  /* /queryResult primary Group */
+
+ /* /queryResult primary Image Pane */
+
+ /* queryResult secondary Group */
+ .qRsGroup                 
+ {
+  padding-top              : 23px;
+  padding-left             : 23px;     
+ }
+
+  /* queryResult primary Image Info */
+  .qRpImgInfo               
+  {   
+   text-align               : left;   
+  }
+  /* queryResult primary Image Info */
+
+  /* queryResult secondary Image Pane */
+  .qRsImgPane               
+  {
+  }
+
+   /* queryResult secondary Image Div */
+   .qRsImgDiv                
+   {
+   }
+
+    /* queryResult secondary Image Frame */
+    .qRsImgFrame              
+    {
+    }
+
+     /* queryResult secondary Image (standard) */
+     .qRsImg1                  
+     {
+     }
+     /* /queryResult secondary Image (standard) */
+
+     /* queryResult secondary Image (hilighted) */
+     .qRsImg2                  
+     {
+     }
+     /* /queryResult secondary Image (hilighted) */
+
+    /* /queryResult secondary Image Frame */
+
+    /* queryResult secondary Image Title */
+    .qRsImgTitle              
+    {
+    }
+    /* /queryResult secondary Image Title */
+
+   /* /queryResult secondary Image Div */
+    
+  /* /queryResult secondary Image Pane */
+
+ /* /queryResult secondary Group */
+      
+ /* #similar Items Pane */
+ .sIpane
+ {
+ }
+
+  /* similarItems primary Image Pane */
+  .sIpImgPane               
+  {
+  } 
+
+   /* similarItems primary Group */
+   .sIpGroup               
+   {
+   }
+
+    /* similarItems primary Image Div */
+    .sIpImgDiv                
+    {
+    }
+
+     /* similarItems primary Image Header */
+     .sIpImgHeader             
+     {
+     }
+     /* /similarItems primary Image Header */
+
+     /* similarItems primary Image Frame */
+     .sIpImgFrame              
+     {
+     }
+
+      /* similarItems primary Image (standard) */
+      .sIpImg1                  
+      {
+      }
+      /* /similarItems primary Image (standard) */
+
+      /* similarItems primary Image (hilighted) */
+      .sIpImg2                  
+      {
+      }
+      /* /similarItems primary Image (hilighted) */
+
+     /* /similarItems primary Image Frame */
+
+     /* similarItems primary Image Title */
+     .sIpImgTitle              
+     {
+     }
+     /* /similarItems primary Image Title */
+
+    /* /similarItems primary Image Div */
+    
+   /* /similarItems primary Group */
+
+  /* /similarItems primary Image Pane */
+
+  /* similarItems secondary Group */
+  .sIsGroup                 
+  {
+  }
+
+   /* similarItems primary Image Info */
+   .sIpImgInfo               
+   {   
+   }
+   /* similarItems primary Image Info */
+
+   /* similarItems secondary Image Pane */
+   .sIsImgPane               
+   {
+   }
+
+    /* similarItems secondary Image Div */
+    .sIsImgDiv                
+    {
+    }
+
+     /* similarItems secondary Image Frame */
+     .sIImgFrame              
+     {
+     }
+
+      /* similarItems secondary Image (standard) */
+      .sIsImg1                  
+      {
+      }
+      /* /similarItems secondary Image (standard) */
+
+      /* similarItems secondary Image (hilighted) */
+      .sIsImg2                  
+      {
+      }
+      /* /similarItems secondary Image (hilighted) */
+
+     /* /similarItems secondary Image Frame */
+
+     /* similarItems secondary Image Title */
+     .sIsImgTitle              
+     {
+     }
+     /* /similarItems secondary Image Title */
+
+    /* /similarItems secondary Image Div */
+      
+   /* /similarItems secondary Image Pane */
+
+  /* /similarItems secondary Group */
+      
+ /* /#similar Items Pane */
+
+/* /#query Result Pane */
+  
+
+
+ 

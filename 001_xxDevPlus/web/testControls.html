@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+
+<html>
+
+ <head>
+  <title>test html</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/css/globalMain.css"  rel="stylesheet" />
+  <!--
+  <link href="/css/controls.css"    rel="stylesheet" />
+  <link href="/css/globalBody.css"  rel="stylesheet" />
+  <link href="/css/search.css"      rel="stylesheet" />
+  <link href="/css/debug.css"       rel="stylesheet" />
+  -->
+  <link rel="icon" href="/img/EverestLogoCubeIcon.png" />
+  <script type="text/javascript" src="/js/jquery-1.10.2.js"></script>
+  <script type="text/javascript" src="/js/common.js"></script> 
+  <script type="text/javascript" src="/js/controls.js"></script> 
+  <!--
+  <script type="text/javascript" src="/js/everest.js"></script> 
+  -->
+  <script type="text/javascript" src="/js/testControls.js"></script> 
+ </head>
+
+
+
+ <body>
+  <div style="text-align:center;display:inline-block;background-color:#f3d5d5;width:100%;">
+   <div style="display:table;margin:0 auto;width:100%;">
+    <div style="display:inline-block;background-color:blue;width:30px;font-size:13px;">
+     &nbsp 
+    </div>
+    <div style="display:inline-block;width:82%;font-size:13px;">
+
+     <div style="display:inline-block;width:100%;">
+      <div style="display:table;margin:0 auto;width:100%;">
+       <div style="display:inline-block;width:1%;font-size:13px;">
+        &nbsp 
+       </div>
+       <div style="display:inline-block;height:12px;width:48%;font-size:13px;">
+        <div style="display:table;margin:0 auto;">
+               <div style="display:inline-block;margin:0 auto;"><a class="slcButton1" onclick="buttonSelect($(this).text().trim())">Europe     </a></div>
+         &nbsp <div style="display:inline-block;margin:0 auto;"><a class="slcButton1" onclick="buttonSelect($(this).text().trim())">Americas   </a></div>
+         &nbsp <div style="display:inline-block;margin:0 auto;"><a class="slcButton1" onclick="buttonSelect($(this).text().trim())">Asia</a>   </div>
+         &nbsp <div style="display:inline-block;margin:0 auto;"><a class="slcButton1" onclick="buttonSelect($(this).text().trim())">Africa     </a></div>
+         &nbsp <div style="display:inline-block;margin:0 auto;"><a class="slcButton1" onclick="buttonSelect($(this).text().trim())">Australia  </a></div>
+        </div>
+       </div>
+       <div style="display:inline-block;height:12px;width:48%;font-size:13px;">
+        <div style="display:table;margin:0 auto;">
+               <div style="display:inline-block;margin:0 auto;"><a class="slcButton1" onclick="buttonSelect($(this).text().trim())">Now        </a></div>
+         &nbsp <div style="display:inline-block;margin:0 auto;"><a class="slcButton1" onclick="buttonSelect($(this).text().trim())">Upcoming   </a></div>
+         &nbsp <div style="display:inline-block;margin:0 auto;"><a class="slcButton1" onclick="buttonSelect($(this).text().trim())">10s        </a></div>
+         &nbsp <div style="display:inline-block;margin:0 auto;"><a class="slcButton1" onclick="buttonSelect($(this).text().trim())">00s        </a></div>
+         &nbsp <div style="display:inline-block;margin:0 auto;"><a class="slcButton1" onclick="buttonSelect($(this).text().trim())">90s        </a></div>
+         &nbsp <div style="display:inline-block;margin:0 auto;"><a class="slcButton1" onclick="buttonSelect($(this).text().trim())">80s        </a></div>
+         &nbsp <div style="display:inline-block;margin:0 auto;"><a class="slcButton1" onclick="buttonSelect($(this).text().trim())">70s        </a></div>
+        </div>
+       </div>
+       <div style="display:inline-block;width:1%;font-size:13px;">
+        &nbsp 
+       </div>
+      </div>
+     </div>
+     <div style="display:inline-block;width:100%;font-size:13px;">
+      <div style="display:table;margin:0 auto;">
+       &nbsp <div style="display:inline-block;margin:0 auto;"><a class="slcButton1" onclick="buttonSelect($(this).text().trim())">Interviews   </a></div>
+       &nbsp <div style="display:inline-block;margin:0 auto;"><a class="slcButton1" onclick="buttonSelect($(this).text().trim())">Speeches     </a></div>
+       &nbsp <div style="display:inline-block;margin:0 auto;"><a class="slcButton1" onclick="buttonSelect($(this).text().trim())">Slides       </a></div>
+       &nbsp <div style="display:inline-block;margin:0 auto;"><a class="slcButton1" onclick="buttonSelect($(this).text().trim())">News         </a></div>
+       &nbsp <div style="display:inline-block;margin:0 auto;"><a class="slcButton1" onclick="buttonSelect($(this).text().trim())">Articles     </a></div>
+       &nbsp <div style="display:inline-block;margin:0 auto;"><a class="slcButton1" onclick="buttonSelect($(this).text().trim())">Books        </a></div>
+       &nbsp <div style="display:inline-block;margin:0 auto;"><a class="slcButton1" onclick="buttonSelect($(this).text().trim())">Trailers     </a></div>
+       &nbsp <div style="display:inline-block;margin:0 auto;"><a class="slcButton1" onclick="buttonSelect($(this).text().trim())">Clips        </a></div>
+       &nbsp
+      </div>
+     </div>
+
+    </div>
+    <div style="display:inline-block;background-color:blue;width:30px;font-size:13px;">
+     &nbsp 
+    </div>
+   </div>
+   <div id="menuheader" class="menuheader">
+    <div class="leftDiv">
+     <!-- div class="mediaTypeFilters" -->
+     <div id="headerSearchButton">
+      <div class="search"><a href="#non"></a></div>
+     </div>
+     <div id="sliderDiv">
+      <table width="100%">
+       <tr>
+        <td id="sliderCell1" width="33%"></td>
+        <td id="sliderCell2" width="33%"></td>
+        <td id="sliderCell3" width="33%"></td>
+       </tr>
+      </table>
+     </div>
+    </div>
+    <div class="rightDiv">
+     <div class="headerButton">                              <div class="buttonArrow" > </div> </div> 
+     <div class="headerButton" onclick="menuHeaderExpand()"> <div class="buttonArrow" > </div> </div> 
+    </div> 
+   </div>
+  </div>
+  <div id="searchPane" class="searchPane">
+   <form method="post" onsubmit="return htmlFromQueryResults();">
+    <div id="searchheader">
+      <font size="2">
+       <b>
+        <input type="text" placeholder="" name="FlatSearchBox" id="FlatSearchBox" size="20"  autocomplete="off">
+       </b>
+      </font>
+    </div>
+   </form> 
+  </div>
+ </body>
+
+ 
+
+
+</html>

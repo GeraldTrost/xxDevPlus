@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EA4554B0-E80C-42E6-803A-FD5616E73D51}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FlexStruc</RootNamespace>
+    <AssemblyName>FlexStruc0008</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DOTNET_H2S, DOTNET_MYS, DOTNET_2MYS, DOTNET_PGS, DOTNET_2PGS, DOTNET_FBD, DOTNET_SQL, DOTNET_MSS, DOTNET_2MSS, DOTNET_ORA, DOTNET_2ORA, DOTNET_DB2, DOTNET_2DB2, DOTNET_DBY, DOTNET_2DBY, DOTNET_HSQ, DOTNET_2HSQ, DOTNET_TDA</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;DOTNET_H2S, DOTNET_MYS, DOTNET_2MYS, DOTNET_PGS, DOTNET_2PGS, DOTNET_FBD, DOTNET_SQL, DOTNET_MSS, DOTNET_2MSS, DOTNET_ORA, DOTNET_2ORA, DOTNET_DB2, DOTNET_2DB2, DOTNET_DBY, DOTNET_2DBY, DOTNET_HSQ, DOTNET_2HSQ, DOTNET_TDA</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.5.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\XP\PRG\MySQL\Connector NET 6.5.4\Assemblies\v2.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=2.0.11.93, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\prg\pgsql\npgsql2\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=2.102.2.20, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\prg\ora10\ODP.NET\bin\2.x\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assoc.cs" />
+    <Compile Include="DbCnd.cs" />
+    <Compile Include="Condition.cs" />
+    <Compile Include="Conditions.cs" />
+    <Compile Include="ctlTripleList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctlTripleList.Designer.cs">
+      <DependentUpon>ctlTripleList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatEdit.cs" />
+    <Compile Include="Db.cs" />
+    <Compile Include="DbCndBlock.cs" />
+    <Compile Include="DbDel.cs" />
+    <Compile Include="DbField.cs" />
+    <Compile Include="DbGrid.cs" />
+    <Compile Include="DbIns.cs" />
+    <Compile Include="DbMsCommand.cs" />
+    <Compile Include="DbMsCommandBuilder.cs" />
+    <Compile Include="DbMsConnection.cs" />
+    <Compile Include="DbMsDataAdapter.cs" />
+    <Compile Include="DbMsDataReader.cs" />
+    <Compile Include="DbMsTransaction.cs" />
+    <Compile Include="DbObj.cs" />
+    <Compile Include="DbSlc.cs" />
+    <Compile Include="DbSlcBlock.cs">
+    </Compile>
+    <Compile Include="DbUpd.cs" />
+    <Compile Include="DbUrl.cs" />
+    <Compile Include="ndUrl.cs" />
+    <Compile Include="Fmla.cs" />
+    <Compile Include="frmDbConnect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDbConnect.Designer.cs">
+      <DependentUpon>frmDbConnect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDtvEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDtvEdit.Designer.cs">
+      <DependentUpon>frmDtvEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectView.Designer.cs">
+      <DependentUpon>frmSelectView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Udf.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tag.cs" />
+    <Compile Include="Trm.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ctlTripleList.resx">
+      <DependentUpon>ctlTripleList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDbConnect.resx">
+      <DependentUpon>frmDbConnect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDtvEdit.resx">
+      <DependentUpon>frmDtvEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectView.resx">
+      <DependentUpon>frmSelectView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ndBase\ndBase\ndBase.csproj">
+      <Project>{BCED3289-91E0-4B22-85A6-AC671CCD204D}</Project>
+      <Name>ndBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ndString\ndString\ndString.csproj">
+      <Project>{F1E85AFE-126A-4B2C-8616-49CD57C7D703}</Project>
+      <Name>ndString</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

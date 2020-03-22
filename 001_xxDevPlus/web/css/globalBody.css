@@ -1,0 +1,358 @@
+
+
+
+/* #query Result Pane */
+.qRpane
+{
+ clear                    : both;
+ border-top               : 1px solid #eee; 
+ border-left              : 1px solid #eee; 
+ border-right             : 1px solid #eee; 
+ border-bottom            : 1px solid #eee; 
+}
+
+ /* queryResult primary Image Pane */
+ .qRpImgPane               
+ {
+  clear                    : both;
+  float                    : left;
+  display                  : inline-block;   
+  width                    : 100%;
+ } 
+
+  /* queryResult primary Group */
+  .qRpGroup               
+  {
+   float                    : left;
+   display                  : inline-block;   
+   
+  }
+
+   /* queryResult primary Image Div */
+   .qRpImgDiv                
+   {
+    
+   }
+
+    /* queryResult primary Image Header */
+    .qRpImgHeader             
+    {
+     font-size                : 11px;
+     min-width                : 90px;
+     min-height               : 25px;   
+     width                    : 90px;
+     height                   : 25px;   
+     overflow                 : hidden;
+    }
+    /* /queryResult primary Image Header */
+
+    /* queryResult primary Image Frame */
+    .qRpImgFrame              
+    {
+     border                   : 1px solid #eee; 
+    }
+
+     /* queryResult primary Image (standard) */
+     .qRpImg1                  
+     {
+      display                  : inline-block;       
+      float                    : left;
+      border                   : 1px solid #eee; 
+      width                    : 80px;
+     }
+     /* /queryResult primary Image (standard) */
+
+     /* queryResult primary Image (hilighted) */
+     .qRpImg2                  
+     {
+      display                  : inline-block;       
+      float                    : left;
+      border                   : 1px solid darkred; 
+      width                    : 80px;
+     }
+     /* /queryResult primary Image (hilighted) */
+
+    /* /queryResult primary Image Frame */
+
+    /* queryResult primary Image Title */
+    .qRpImgTitle              
+    {
+     max-width                : 90px;
+     max-height               : 25px;   /**/
+     min-width                : 90px;
+     min-height               : 25px;   /**/
+     font-size                : 11px;
+     overflow                 : hidden;
+    }
+    /* /queryResult primary Image Title */
+
+   /* /queryResult primary Image Div */
+  
+  /* /queryResult primary Group */
+
+ /* /queryResult primary Image Pane */
+
+ /* queryResult secondary Group */
+ .qRsGroup                 
+ {
+  display                  : inline-block;
+  float                    : left;
+  clear                    : none;
+  margin                   : auto;
+ }
+
+  /* queryResult primary Image Info */
+  .qRpImgInfo               
+  {   
+   border                   : 1px solid #eee; 
+   width                    : 100%;
+   text-align               : center;
+   min-height               : 85px;
+  }
+  /* queryResult primary Image Info */
+
+  /* queryResult secondary Image Pane */
+  .qRsImgPane               
+  {
+   display                  : inline-block;
+   float                    : left;
+   clear                    : none;
+   border                   : 1px solid #eee; 
+   width                    : 100%;
+  }
+
+   /* queryResult secondary Image Div */
+   .qRsImgDiv                
+   {
+    margin-right             : 5px;
+    display                  : inline-block;
+    border                   : 1px solid lightgray; 
+    font-weight              : bold;
+    min-width                : 85px;
+    min-height               : 62px;
+    max-width                : 85px;
+    max-height               : 62px;
+   }
+
+    /* queryResult secondary Image Frame */
+    .qRsImgFrame              
+    {
+     border                   : 1px solid lightgray; 
+    }
+
+     /* queryResult secondary Image (standard) */
+     .qRsImg1                  
+     {
+      display                  : inline-block;       
+      float                    : left;
+      border                   : 1px solid #eee; 
+     }
+     /* /queryResult secondary Image (standard) */
+
+     /* queryResult secondary Image (hilighted) */
+     .qRsImg2                  
+     {
+      display                  : inline-block;       
+      float                    : left;
+      border                   : 1px solid darkred; 
+     }
+     /* /queryResult secondary Image (hilighted) */
+
+    /* /queryResult secondary Image Frame */
+
+    /* queryResult secondary Image Title */
+    .qRsImgTitle              
+    {
+     font-size                : 9px;
+     min-width                : 50px;
+     max-width                : 50px;
+     min-height               : 25px;   /**/
+     max-height               : 25px;   /**/
+     overflow                 : hidden;
+    }
+    /* /queryResult secondary Image Title */
+
+   /* /queryResult secondary Image Div */
+    
+  /* /queryResult secondary Image Pane */
+
+ /* /queryResult secondary Group */
+      
+ /* #similar Items Pane */
+ .sIpane
+ {
+  clear                    : both;
+  border-top               : 1px solid #eee; 
+  border-left              : 1px solid #eee; 
+  border-right             : 1px solid #eee; 
+  border-bottom            : 1px solid #eee; 
+ }
+
+  /* similarItems primary Image Pane */
+  .sIpImgPane               
+  {
+  } 
+
+   /* similarItems primary Group */
+   .sIpGroup               
+   {
+    float                    : left;
+    display                  : inline-block;      
+   }
+
+    /* similarItems primary Image Div */
+    .sIpImgDiv                
+    {
+    }
+
+     /* similarItems primary Image Header */
+     .sIpImgHeader             
+     {
+      font-size                : 11px;
+      min-width                : 90px;
+      min-height               : 25px;   
+      width                    : 90px;
+      height                   : 25px;   
+      overflow                 : hidden;
+     }
+     /* /similarItems primary Image Header */
+
+     /* similarItems primary Image Frame */
+     .sIpImgFrame              
+     {
+      border                   : 1px solid #eee; 
+     }
+
+      /* similarItems primary Image (standard) */
+      .sIpImg1                  
+      {
+       display                  : inline-block;       
+       float                    : left;
+       border                   : 1px solid #eee; 
+       width                    : 80px;
+      }
+      /* /similarItems primary Image (standard) */
+
+      /* similarItems primary Image (hilighted) */
+      .sIpImg2                  
+      {
+       display                  : inline-block;       
+       float                    : left;
+       border                   : 1px solid darkred; 
+       width                    : 80px;
+      }
+      /* /similarItems primary Image (hilighted) */
+
+     /* /similarItems primary Image Frame */
+
+     /* similarItems primary Image Title */
+     .sIpImgTitle              
+     {
+      max-width                : 90px;
+      max-height               : 25px;   /**/
+      min-width                : 90px;
+      min-height               : 25px;   /**/
+      font-size                : 11px;
+      overflow                 : hidden;
+     }
+     /* /similarItems primary Image Title */
+
+    /* /similarItems primary Image Div */
+    
+   /* /similarItems primary Group */
+
+  /* /similarItems primary Image Pane */
+
+  /* similarItems secondary Group */
+  .sIsGroup                 
+  {
+   float                    : top;
+   clear                    : both;
+   align                    : top;
+  }
+
+   /* similarItems primary Image Info */
+   .sIpImgInfo               
+   {   
+    border                   : 1px solid #eee; 
+    width                    : 100%;
+   }
+   /* similarItems primary Image Info */
+
+   /* similarItems secondary Image Pane */
+   .sIsImgPane               
+   {
+    border                   : 1px solid #eee; 
+    width                    : 100%;
+   }
+
+    /* similarItems secondary Image Div */
+    .sIsImgDiv                
+    {
+     margin-right             : 5px;
+     display                  : inline-block;
+     border                   : 1px solid lightgray; 
+     font-weight              : bold;
+     min-width                : 85px;
+     min-height               : 62px;
+     max-width                : 85px;
+     max-height               : 62px;
+    }
+
+     /* similarItems secondary Image Frame */
+     .sIImgFrame              
+     {
+      border                   : 1px solid lightgray; 
+     }
+
+      /* similarItems secondary Image (standard) */
+      .sIsImg1                  
+      {
+       display                  : inline-block;       
+       float                    : left;
+       border                   : 1px solid #eee; 
+      }
+      /* /similarItems secondary Image (standard) */
+
+      /* similarItems secondary Image (hilighted) */
+      .sIsImg2                  
+      {
+       display                  : inline-block;       
+       float                    : left;
+       border                   : 1px solid darkred; 
+      }
+      /* /similarItems secondary Image (hilighted) */
+
+     /* /similarItems secondary Image Frame */
+
+     /* similarItems secondary Image Title */
+     .sIsImgTitle              
+     {
+      font-size                : 9px;
+      min-width                : 50px;
+      max-width                : 50px;
+      min-height               : 25px;   /**/
+      max-height               : 25px;   /**/
+      overflow                 : hidden;
+     }
+     /* /similarItems secondary Image Title */
+
+    /* /similarItems secondary Image Div */
+      
+   /* /similarItems secondary Image Pane */
+
+  /* /similarItems secondary Group */
+      
+ /* /#similar Items Pane */
+
+/* /#query Result Pane */
+  
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 

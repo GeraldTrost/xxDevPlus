@@ -1,0 +1,28 @@
+
+
+
+     ((fs))ytsearch/{Fn[1..2]}/{Fn}{.{Fe}}.xml
+
+     ytsearch://ytapi.google.com/armageddon official movie trailer;;2           id='wpId:Armageddon'
+
+     ytresult
+
+
+    "'ytID:'.videoid            'def:Class'          'Video'
+
+
+
+    ":id                       'rel:hasVideo'       'ytID:'.videoid
+    "'ytID:'.videoid            'atr:Title'          .title[1..65]
+    "'ytID:'.videoid            'atr:Source'         'Youtube'
+    "'ytID:'.videoid            'atr:ImageLink'      'https://img.youtube.com/vi/'.videoid'/0.jpg'
+    "'ytID:'.videoid            'atr:SourceLink'     'https://www.youtube.com/watch?v='.videoid
+
+
+   <ytresult 
+    videoid="kg_jH47u480" 
+    title="Armageddon - Official® Trailer [HD]" 
+    publishedat="2013-05-28T01:34:50.000Z" 
+    description="Release Date: July 1, 1998 Michael Bay (The Rock) directed this science fiction action thriller in the When Worlds Collide tradition. After astronomy students ..." 
+    channeltitle="TrailersPlaygroundHD" 
+   />

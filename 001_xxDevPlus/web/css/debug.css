@@ -1,0 +1,244 @@
+
+body 
+{
+}
+
+/* #query Result Pane */
+.qRpane
+{
+ border-top               : 1px solid red; 
+ border-left              : 1px solid red; 
+ border-right             : 1px solid red; 
+ border-bottom            : 1px solid red; 
+}
+
+ /* queryResult primary Image Pane */
+ .qRpImgPane               
+ {
+ } 
+
+  /* queryResult primary Group */
+  .qRpGroup               
+  {
+  }
+
+   /* queryResult primary Image Div */
+   .qRpImgDiv                
+   {
+   }
+
+    /* queryResult primary Image Header */
+    .qRpImgHeader             
+    {
+    }
+    /* /queryResult primary Image Header */
+
+    /* queryResult primary Image Frame */
+    .qRpImgFrame              
+    {
+     border                   : 1px solid lightgray;         
+    }
+
+     /* queryResult primary Image (standard) */
+     .qRpImg1                  
+     {
+     }
+     /* /queryResult primary Image (standard) */
+
+     /* queryResult primary Image (hilighted) */
+     .qRpImg2                  
+     {
+     }
+     /* /queryResult primary Image (hilighted) */
+
+    /* /queryResult primary Image Frame */
+
+    /* queryResult primary Image Title */
+    .qRpImgTitle              
+    {
+    }
+    /* /queryResult primary Image Title */
+
+   /* /queryResult primary Image Div */
+  
+  /* /queryResult primary Group */
+
+ /* /queryResult primary Image Pane */
+
+ /* queryResult secondary Group */
+ .qRsGroup                 
+ {
+ }
+
+  /* queryResult primary Image Info */
+  .qRpImgInfo               
+  {   
+   border                   : 1px solid yellow;       
+  }
+  /* queryResult primary Image Info */
+
+  /* queryResult secondary Image Pane */
+  .qRsImgPane               
+  {
+   border                   : 1px solid gray;       
+  }
+
+   /* queryResult secondary Image Div */
+   .qRsImgDiv                
+   {
+   }
+
+    /* queryResult secondary Image Frame */
+    .qRsImgFrame              
+    {
+    }
+
+     /* queryResult secondary Image (standard) */
+     .qRsImg1                  
+     {
+     }
+     /* /queryResult secondary Image (standard) */
+
+     /* queryResult secondary Image (hilighted) */
+     .qRsImg2                  
+     {
+     }
+     /* /queryResult secondary Image (hilighted) */
+
+    /* /queryResult secondary Image Frame */
+
+    /* queryResult secondary Image Title */
+    .qRsImgTitle              
+    {
+    }
+    /* /queryResult secondary Image Title */
+
+   /* /queryResult secondary Image Div */
+    
+  /* /queryResult secondary Image Pane */
+
+ /* /queryResult secondary Group */
+      
+ /* #similar Items Pane */
+ .sIpane
+ {
+  border-top               : 1px solid green; 
+  border-left              : 1px solid green; 
+  border-right             : 1px solid green; 
+  border-bottom            : 1px solid green; 
+  background-color         : gray;
+ }
+
+  /* similarItems primary Image Pane */
+  .sIpImgPane               
+  {
+  } 
+
+   /* similarItems primary Group */
+   .sIpGroup               
+   {
+   }
+
+    /* similarItems primary Image Div */
+    .sIpImgDiv                
+    {
+    }
+
+     /* similarItems primary Image Header */
+     .sIpImgHeader             
+     {
+     }
+     /* /similarItems primary Image Header */
+
+     /* similarItems primary Image Frame */
+     .sIpImgFrame              
+     {
+     }
+
+      /* similarItems primary Image (standard) */
+      .sIpImg1                  
+      {
+      }
+      /* /similarItems primary Image (standard) */
+
+      /* similarItems primary Image (hilighted) */
+      .sIpImg2                  
+      {
+      }
+      /* /similarItems primary Image (hilighted) */
+
+     /* /similarItems primary Image Frame */
+
+     /* similarItems primary Image Title */
+     .sIpImgTitle              
+     {
+     }
+     /* /similarItems primary Image Title */
+
+    /* /similarItems primary Image Div */
+    
+   /* /similarItems primary Group */
+
+  /* /similarItems primary Image Pane */
+
+  /* similarItems secondary Group */
+  .sIsGroup                 
+  {
+  }
+
+   /* similarItems primary Image Info */
+   .sIpImgInfo               
+   {   
+    border                   : 1px solid orange;       
+   }
+   /* similarItems primary Image Info */
+
+   /* similarItems secondary Image Pane */
+   .sIsImgPane               
+   {
+    border                   : 1px solid gray;       
+   }
+
+    /* similarItems secondary Image Div */
+    .sIsImgDiv                
+    {
+    }
+
+     /* similarItems secondary Image Frame */
+     .sIImgFrame              
+     {
+     }
+
+      /* similarItems secondary Image (standard) */
+      .sIsImg1                  
+      {
+      }
+      /* /similarItems secondary Image (standard) */
+
+      /* similarItems secondary Image (hilighted) */
+      .sIsImg2                  
+      {
+      }
+      /* /similarItems secondary Image (hilighted) */
+
+     /* /similarItems secondary Image Frame */
+
+     /* similarItems secondary Image Title */
+     .sIsImgTitle              
+     {
+     }
+     /* /similarItems secondary Image Title */
+
+    /* /similarItems secondary Image Div */
+      
+   /* /similarItems secondary Image Pane */
+
+  /* /similarItems secondary Group */
+      
+ /* /#similar Items Pane */
+
+/* /#query Result Pane */
+  
+
+
+ 
