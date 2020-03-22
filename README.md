@@ -3,7 +3,7 @@
 this is intended: 
 
 xxDevPlus should become a collection of smart tools and base classes for most any java App and/or csharp App 
-- in other words: it schould become a smart and reliable developer's kernel addressing most common developers' tasks.
+- in other words: it schould become a smart and reliable developers' kernel addressing most common developers' tasks.
 
 status:
 
